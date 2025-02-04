@@ -1,6 +1,7 @@
 import { Cards } from '@/components/Cards.tsx'
 import type { Models } from 'appwrite'
 import type { FC } from 'react'
+import CollectionTable from '@/components/Collection-Table.tsx'
 
 interface Props {
   user: Models.User<Models.Preferences> | null
@@ -12,5 +13,5 @@ export const Collection: FC<Props> = ({ user }) => {
     return <Cards user={user} />
   }
 
-  return null
+  return <CollectionTable />
 }
